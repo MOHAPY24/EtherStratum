@@ -30,7 +30,7 @@ It’s ideal for:
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/YourUsername/EtherStratum.git
+git clone https://github.com/MOHAPY24/EtherStratum.git
 cd EtherStratum
 chmod +x etherstratum-installer.sh
 ./etherstratum-installer.sh
