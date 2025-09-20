@@ -63,11 +63,9 @@ clear
 echo "Customizing.."
 mkdir -p ~/.config/fastfetch
 cp etherstartum-logo.txt ~/.config/fastfetch/logo.txt
-fastfetch --logo ~/.config/fastfetch/logo.txt
+clear
 fastfetch --gen-config
 echo "fastfetch --logo ~/.config/fastfetch/logo.txt" >> /home/$USER/.bashrc
-echo "clear" >> /home/$USER/.bashrc
-echo "fastfetch" >> /home/$USER/.bashrc
 echo "cowsay EtherStratum!" >> /home/$USER/.bashrc
 
 clear
