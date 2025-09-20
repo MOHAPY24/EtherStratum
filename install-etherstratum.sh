@@ -50,11 +50,15 @@ curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt update && sudo apt install spotify-client
 clear
-sudo add-apt-repository ppa:pypy/ppa
-
-
-sudo apt install -y kde-plasma-desktop pypy protonvpn openvpn hide.me nvim vim emacs nano flatpak snap kitty git build-essential python3 python3-pip npm ollama gcc clang pyenv venv cargo rustup golang nodejs cowsay cmatrix cava openssl curl wget cmake default-jre default-jdk lua5.4 zsh rpi-imager kiwix
+wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.8_all.deb
+sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update
+sudo apt install proton-vpn-gnome-desktop
 clear
+
+sudo apt install -y openvpn
+sudo apt install -y kde-plasma-desktop pypy openvpn hide.me nvim vim emacs nano flatpak snap kitty git build-essential python3 python3-pip npm ollama gcc clang pyenv venv cargo rustup golang nodejs cowsay cmatrix cava openssl curl wget cmake default-jre default-jdk lua5.4 zsh rpi-imager kiwix
+clear
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo pip install colorama requests rich typer pipenv virtualenv psutil paramiko fabric schedule docker cryptography pyopenssl bcrypt scapy pwntools black flake8 pytest ipython juypter fastapi httpie tqdm
 clear
 
