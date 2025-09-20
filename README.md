@@ -22,7 +22,7 @@ It’s ideal for:
 * Automated installation of **core dev languages & tools**
 * Sandbox directories for testing: `/vat` and `/temp`
 * Custom aliases for productivity
-* Terminal enhancements like Fastfetch, Kitty, and other CLI utilities
+* Terminal enhancements like Fastfetch, Kitty, and other CLI utilities and a custom fastfetch Ether Logo
 * Optional GUI desktop: KDE Plasma
 
 ---
