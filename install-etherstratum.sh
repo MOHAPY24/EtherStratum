@@ -77,7 +77,7 @@ clear
 
 echo "Customizing.."
 mkdir -p ~/.config/fastfetch
-cp etherstartum-logo.txt ~/.config/fastfetch/logo.txt
+cp etherstratum-logo.txt ~/.config/fastfetch/logo.txt
 clear
 
 
