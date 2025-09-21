@@ -1,165 +1,96 @@
 
-# EtherStratum
 
-> **EtherStratum** – The ultimate Debian-based dev & OPSEC installer. Fully automated setup for developers, sysadmins, and security enthusiasts.
+# EtherStratum 🌠
 
----
+**EtherStratum** (1.0.0 "Garra") is a lightweight, developer-focused Debian-based distribution installer. It’s designed to seamlessly run on **any Debian/Ubuntu-based system**, providing a fully configured desktop, essential development tools, OPSEC utilities, and a curated KDE setup—ready to go out-of-the-box.
 
-## ⚡ Overview
-
-EtherStratum is a **one-command installer** that transforms a fresh Debian system into a **full-featured development environment** with OPSEC tools, productivity enhancements, sandbox directories, and terminal customizations.
-
-It’s ideal for:
-
-* Developers who want all common languages & tools pre-installed
-* Sysadmins who need fast setup on new machines
-* Security-conscious users who want OPSEC-ready software
+Whether you’re distrohopping or building a dev workstation, EtherStratum gets you productive fast, without the bloat.
 
 ---
 
 ## 🚀 Features
 
-* Automated installation of **core dev languages & tools**
-* Sandbox directories for testing: `/vat` and `/temp`
-* Custom aliases for productivity
-* Terminal enhancements like Fastfetch, Kitty, and other CLI utilities and a custom fastfetch Ether Logo
-* Optional GUI desktop: KDE Plasma
+* **Base:** Debian 13 “Trixie” (Debian-based)
+
+* **Desktop Environment:** KDE Plasma 
+
+* **Filesystem Enhancements:**
+
+  * `/home` – personal files
+  * `/var` – system files
+  * `/temp` – ephemeral temp files (Replace if you already have /tmp, could be an extra)
+  * `/vat` – sandbox for testing scripts or experimental tools
+
+* **Pre-installed Development Tools:**
+
+  * Languages: Python 3, Node.js, Go, Rust, Ruby, Lua
+  * Package Managers: pip, npm, cargo, pyenv, venv
+  * Editors: VS Codium, Vim, Emacs, Nano
+  * Compilation & Build: GCC, Clang, Make, CMake, Build-Essential, Default JDK/JRE
+  * Containers & Virtualization: Docker, Podman, QEMU
+  * Utilities: Git, curl, wget, tmux, cmatrix, cava, neofetch/fastfetch
+
+* **OPSEC / Security Tools:**
+
+  * OpenVPN, ProtonVPN, Tor/Torsocks, YubiKey Manager, cryptsetup
+  * Network analysis: Nmap, Aircrack-ng, Masscan, Metasploit
+  * Python security tools: scapy, pwntools, pyopenssl, bcrypt
+
+* **Media & Productivity:**
+
+  * Spotify, Brave, GIMP, Kiwix
+  * Cowsay, colorama, rich
+
+* **Installer & Automation:**
+
+  * Single bash script (`install-etherutils.sh`) installs and configures everything
+  * Custom aliases & shortcuts for dev productivity
+  * Fastfetch integration with custom EtherStratum logo
 
 ---
 
-## 🛠️ Installation
+## 📦 Installation
+
+1. Start with any **Debian/Ubuntu-based system** (Netinstall recommended).
+2. Download the EtherStratum installer:
 
 ```bash
 git clone https://github.com/MOHAPY24/EtherStratum.git
 cd EtherStratum
-chmod +x etherstratum-installer.sh
-./etherstratum-installer.sh
+chmod +x install-etherutils.sh
+sudo ./install-etherutils.sh
 ```
 
-> Must run with a user that has **sudo privileges**.
+3. Sit back while the installer sets up your system with **all tools, themes, and aliases**.
+4. Reboot and enjoy a fully configured EtherStratum system!
 
 ---
 
-## 🖥️ Installed Packages & Tools
+## 💻 Why EtherStratum?
 
-### **Core Development Tools**
-
-* **Python 3 & pip3** – general development & scripting
-* **Node.js & npm** – JavaScript & TypeScript development
-* **Go & Rust** – systems & backend development
-* **C/C++ (GCC, Clang, Build-essential)** – compiled languages
-* **Java (OpenJDK)** – JVM applications
-* **Lua 5.4** – scripting
-* **VsCodium** – lightweight open-source code editor
-* **Neovim, Vim, Emacs, Nano** – CLI editors
+* **Cross-Distro Compatibility:** Works on any Debian or Ubuntu derivative
+* **Lightweight but Full-Featured:** Optimized KDE, pre-installed dev tools, minimal bloat
+* **Sandboxed Testing:** Use `/vat` to test scripts or experimental software safely
+* **Fast & Stable:** Tested even on older hardware; scales well on modern machines
+* **OPSEC & Dev Ready:** Security, privacy, and productivity built-in
 
 ---
 
-### **Python Packages (installed via pip3)**
-
-* **colorama** – colored terminal output
-* **requests** – HTTP requests library
-* **rich** – beautiful terminal output & formatting
-* **typer** – CLI app framework
-* **pipenv, virtualenv** – Python environment management
-* **psutil** – system & process monitoring
-* **paramiko** – SSH automation
-* **fabric** – remote server automation
-* **schedule** – task scheduling
-* **cryptography, pyopenssl, bcrypt** – security libraries
-* **scapy** – network packet crafting
-* **pwntools** – CTF exploitation tools
-* **black, flake8** – Python code formatting & linting
-* **pytest** – testing framework
-* **ipython, jupyter** – interactive computing & notebooks
-* **fastapi** – modern API framework
-* **httpie** – command-line HTTP client
-* **tqdm** – progress bars for scripts
-
----
-
-### **Terminal Utilities**
-
-* **cowsay** – fun terminal messages
-* **cmatrix** – Matrix-style terminal effect
-* **cava** – terminal-based audio visualizer
-* **kitty terminal** – GPU-accelerated terminal emulator
-* **fastfetch** – system info display tool
-
----
-
-### **OPSEC & Productivity Tools**
-
-* **Brave Browser** – privacy-focused browser
-* **Spotify** – media streaming
-* **VPN clients** – ProtonVPN, OpenVPN, hide.me
-* **OpenSSL & GPG** – cryptography & secure communication
-* **Ollama & TinyLlama** – optional local AI models
-
----
-
-### **Other Utilities**
-
-* **flatpak & snap** – universal package managers
-* **wget, curl** – download & network tools
-* **docker** – containerization
-* **cmake** – build system
-* **rpi-imager** – optional Raspberry Pi imaging tool
-
----
-
-## 🔧 Sandbox Directories
-
-* `/vat` –  environment for testing scripts; can be cleared anytime
-* `/temp` – temporary files storage
-* `/var` – standard system variable data
-
-Permissions are set to allow easy access while keeping other directories safe.
-
----
-
-## ⚡ Aliases Included
+## ⚡ Aliases & Shortcuts
 
 ```bash
 alias python="python3"
-alias py="python3"
-alias pip3="python3 -m pip"
 alias ffs="fastfetch"
 alias nef="neofetch"
 alias vsc="codium"
-alias lsa="ls -a"
-alias lsl="ls -l"
-alias rmrf="rm -rf"
-alias cls="clear"
-alias repeat="yes"
-alias print="echo"
-alias etherstratum="echo EtherStratum v1.0.0, Debian 'Bookworm'"
-alias firf="firefox"
-alias brvb="brave-browser"
+alias etherstratum="echo EtherStratum v1.0.0"
+alias clearvat="sudo rm -rf /vat/*"
 ```
 
-These aliases streamline development and terminal navigation.
+…plus more pre-configured aliases to streamline your workflow.
 
 ---
 
-## 🌟 Why EtherStratum?
+## 📜 License
 
-* One script sets up a **complete dev + OPSEC environment**
-* Works across **any Debian-based distro**
-* Sandbox directories keep your system clean and experiments isolated
-* Pre-installed tools save **hours of setup time**
-* Perfect for developers who **distro hop** without losing workflow consistency
-
----
-
-## 📌 Notes
-
-* Tested on **Debian 13 Trixie**, should work on other Debian derivatives
-* Ensure your user has **sudo privileges**
-* `/vat` can be used for **ephemeral testing or sandbox scripts**
-
----
-
-## ⚡ License
-
-MIT License – free to use, fork, and modify.
+EtherStratum is released under the **MIT License**. See `LICENSE` for details.
