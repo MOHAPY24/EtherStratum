@@ -181,6 +181,8 @@ clear
 clear
 echo "adding common aliases..."
 cat << 'ALIASES' >> ~/.bashrc
+clear
+fastfetch --logo ~/.config/fastfetch/logo.txt
 alias python="python3"
 alias ffs="fastfetch"
 alias nef="neofetch"
