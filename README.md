@@ -2,7 +2,7 @@
 
 # EtherStratum 🌠
 
-**EtherStratum** (1.0.0 "Garra") is a lightweight, developer-focused Debian-based distribution installer. It’s designed to seamlessly run on **any Debian/Ubuntu-based system**, providing a fully configured desktop, essential development tools, OPSEC utilities, and a curated KDE setup—ready to go out-of-the-box.
+**EtherStratum** (1.1.0 "Kirbensis") is a lightweight, developer-focused Debian-based distribution installer. It’s designed to seamlessly run on **any Debian/Ubuntu-based system**, providing a fully configured desktop, essential development tools, OPSEC utilities, ready to go out-of-the-box.
 
 Whether you’re distrohopping or building a dev workstation, EtherStratum gets you productive fast, without the bloat.
 
@@ -10,9 +10,9 @@ Whether you’re distrohopping or building a dev workstation, EtherStratum gets 
 
 ## 🚀 Features
 
-* **Base:** Debian 13 “Trixie” (Debian-based)
+* **Base:** Debian 13 “Trixie” (Debian-based) (Or use any debian or ubuntu based distro)
 
-* **Desktop Environment:** KDE Plasma 
+* **Desktop Environment:** BSPWM
 
 * **Filesystem Enhancements:**
 
@@ -24,11 +24,11 @@ Whether you’re distrohopping or building a dev workstation, EtherStratum gets 
 * **Pre-installed Development Tools:**
 
   * Languages: Python 3, Node.js, Go, Rust, Ruby, Lua
-  * Package Managers: pip, npm, cargo, pyenv, venv
+  * Package Managers: pip, npm, cargo, pyenv, venv, nala
   * Editors: VS Codium, Vim, Emacs, Nano
   * Compilation & Build: GCC, Clang, Make, CMake, Build-Essential, Default JDK/JRE
   * Containers & Virtualization: Docker, Podman, QEMU
-  * Utilities: Git, curl, wget, tmux, cmatrix, cava, neofetch/fastfetch
+  * Utilities: Git, curl, wget, tmux, cmatrix, cava, fastfetch
 
 * **OPSEC / Security Tools:**
 
@@ -70,7 +70,7 @@ sudo ./install-etherutils.sh
 
 * **Cross-Distro Compatibility:** Works on any Debian or Ubuntu derivative
 * **Lightweight but Full-Featured:** Optimized KDE, pre-installed dev tools, minimal bloat
-* **Sandboxed Testing:** Use `/vat` to test scripts or experimental software safely
+* **Sandboxed Testing:** Use `/vat` to test scripts or experimental software safely (TestVat system)
 * **Fast & Stable:** Tested even on older hardware; scales well on modern machines
 * **OPSEC & Dev Ready:** Security, privacy, and productivity built-in
 
@@ -83,7 +83,7 @@ alias python="python3"
 alias ffs="fastfetch"
 alias nef="neofetch"
 alias vsc="codium"
-alias etherstratum="echo EtherStratum v1.0.0"
+alias etherstratum="echo EtherStratum v1.1.0"
 alias clearvat="sudo rm -rf /vat/*"
 ```
 
