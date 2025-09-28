@@ -7,7 +7,7 @@
 Whether you’re distrohopping or building a dev workstation, EtherStratum gets you productive fast, without the bloat.
 
 ## Whats New?
-* Stock DE changed from BWSPM to XFCE
+* Stock DE changed from BSPWM to XFCE
 * More aliases added
 * Fixed custom fastfetch logo not being properly loaded
 
