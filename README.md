@@ -2,9 +2,15 @@
 
 # EtherStratum 🌠
 
-**EtherStratum** (1.1.0 "Kirbensis") is a lightweight, developer-focused Debian-based distribution installer. It’s designed to seamlessly run on **any Debian/Ubuntu-based system**, providing a fully configured desktop, essential development tools, OPSEC utilities, ready to go out-of-the-box.
+**EtherStratum** (1.2.0 "Danio") is a lightweight, developer-focused Debian-based distribution installer. It’s designed to seamlessly run on **any Debian/Ubuntu-based system**, providing a fully configured desktop, essential development tools, OPSEC utilities, ready to go out-of-the-box.
 
 Whether you’re distrohopping or building a dev workstation, EtherStratum gets you productive fast, without the bloat.
+
+## Whats New?
+* Stock DE changed from BWSPM to XFCE
+* More aliases added
+* Fixed custom fastfetch logo not being properly loaded
+
 
 ---
 
@@ -12,13 +18,13 @@ Whether you’re distrohopping or building a dev workstation, EtherStratum gets 
 
 * **Base:** Debian 13 “Trixie” (Debian-based) (Or use any debian or ubuntu based distro)
 
-* **Desktop Environment:** BSPWM
+* **Desktop Environment:** XFCE4
 
 * **Filesystem Enhancements:**
 
   * `/home` – personal files
   * `/var` – system files
-  * `/temp` – ephemeral temp files (Replace if you already have /tmp, could be an extra)
+  * `/tmp` – temp files (if you already have it the installer wont make it)
   * `/vat` – sandbox for testing scripts or experimental tools
 
 * **Pre-installed Development Tools:**
@@ -32,7 +38,7 @@ Whether you’re distrohopping or building a dev workstation, EtherStratum gets 
 
 * **OPSEC / Security Tools:**
 
-  * OpenVPN, ProtonVPN, Tor/Torsocks, YubiKey Manager, cryptsetup
+  * OpenVPN, ProtonVPN, YubiKey Manager, cryptsetup
   * Network analysis: Nmap, Aircrack-ng, Masscan, Metasploit
   * Python security tools: scapy, pwntools, pyopenssl, bcrypt
 
@@ -87,7 +93,7 @@ alias etherstratum="echo EtherStratum v1.1.0"
 alias clearvat="sudo rm -rf /vat/*"
 ```
 
-…plus more pre-configured aliases to streamline your workflow.
+…plus wayy more pre-configured aliases to streamline your workflow.
 
 ---
 
