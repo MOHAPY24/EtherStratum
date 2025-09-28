@@ -47,27 +47,56 @@ sudo apt install fastfetch
 
 wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.8_all.deb
 sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update
-sudo apt install proton-vpn-gnome-desktop
+sudo apt install -y proton-vpn-gnome-desktop
 
 
-sudo apt install -y openvpn neofetch samba 
+sudo apt install -y openvpn 
+sudo apt install -y neofetch 
+sudo apt install -y samba 
 sudo apt install -y xfce4
-sudo apt install -y vim emacs nano 
-sudo apt install -y flatpak snap 
-sudo apt install -y kitty git nala nix
+sudo apt install -y vim 
+sudo apt install -y emacs 
+sudo apt install -y nano 
+sudo apt install -y flatpak 
+sudo apt install -y kitty 
+sudo apt install -y git 
+sudo apt install -y nala 
+sudo apt install -y nix
 sudo apt install -y build-essential 
-sudo apt install -y python3 python3-pip npm 
-sudo apt install -y gcc clang cargo rustup 
-sudo apt install -y golang nodejs 
-sudo apt install -y cowsay cmatrix 
-sudo apt install -y cava openssl curl wget wine
-sudo apt install -y cmake default-jre 
-sudo apt install -y default-jdk lua5.4 
-sudo apt install -y zsh ruby nmap gpa gnupg
+sudo apt install -y python3 
+sudo apt install -y python3-pip 
+sudo apt install -y npm 
+sudo apt install -y gcc 
+sudo apt install -y clang 
+sudo apt install -y cargo 
+sudo apt install -y rustup 
+sudo apt install -y golang 
+sudo apt install -y nodejs 
+sudo apt install -y cowsay 
+sudo apt install -y cmatrix 
+sudo apt install -y cava 
+sudo apt install -y openssl 
+sudo apt install -y curl 
+sudo apt install -y wget 
+sudo apt install -y wine
+sudo apt install -y cmake 
+sudo apt install -y default-jre 
+sudo apt install -y default-jdk 
+sudo apt install -y lua5.4 
+sudo apt install -y zsh 
+sudo apt install -y ruby 
+sudo apt install -y nmap 
+sudo apt install -y gpa 
+sudo apt install -y gnupg
 sudo apt install -y yubikey-manager 
-sudo apt install -y cryptsetup nftables
-sudo apt install -y docker podman qemu 
-sudo apt install -y aircrack-ng metasploit masscan
+sudo apt install -y cryptsetup 
+sudo apt install -y nftables
+sudo apt install -y docker 
+sudo apt install -y podman 
+sudo apt install -y qemu 
+sudo apt install -y aircrack-ng 
+sudo apt install -y metasploit 
+sudo apt install -y masscan
 clear
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 mkdir -p ~/venvs/venv
