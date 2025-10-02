@@ -17,6 +17,13 @@ sudo echo "ready, Sudo allowed."
 sleep 3
 clear
 
+if [ -f /etc/debian_version ]; then
+    echo "[*] Debian base detected. Continuing installation..."
+else
+    echo "[x] No Debian base located. Are you using a non-Debian based distro?"
+    exit 1
+fi
+
 echo "updating package lists..."
 sudo apt update -y
 clear
