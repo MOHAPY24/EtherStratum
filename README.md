@@ -1,4 +1,4 @@
-[example](Screenshot_20251003_124204-1.png)
+![example_photo](Screenshot_20251003_124204-1.png)
 
 # EtherStratum 🌠
 
