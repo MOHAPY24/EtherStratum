@@ -108,6 +108,7 @@ sudo apt install -y nftables
 sudo apt install -y docker 
 sudo apt install -y podman 
 sudo apt install -y qemu 
+sudo apt install -y tty-clock
 sudo apt install -y aircrack-ng 
 sudo apt install -y metasploit 
 sudo apt install -y masscan
@@ -116,10 +117,10 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 mkdir -p ~/venvs/venv
 sudo python3 -m venv ~/venvs/venv
 source ~/venvs/venv/bin/activate
-sudo pip install colorama requests rich typer pipenv virtualenv psutil 
-sudo pip install paramiko fabric schedule docker cryptography pyopenssl 
-sudo pip install bcrypt scapy pwntools black flake8 pytest ipython 
-sudo pip install juypter fastapi httpie tqdm orjson
+pip install colorama requests rich typer pipenv virtualenv psutil
+pip install paramiko fabric schedule docker cryptography pyopenssl
+pip install bcrypt scapy pwntools black flake8 pytest ipython
+pip install fastapi httpie tqdm orjson
 clear
 
 
