@@ -12,17 +12,23 @@ cat << "EOF"
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 EOF
 
-echo "Welcome to the EtherStratum distro installer."
-sudo echo "ready, Sudo allowed."
-sleep 3
-clear
-
 if [ -f /etc/debian_version ]; then
     echo "[*] Debian base detected. Continuing installation..."
 else
     echo "[x] No Debian base located. Are you using a non-Debian based distro?"
     exit 1
 fi
+
+
+
+echo "Welcome to the EtherStratum distro installer."
+sudo echo "ready, Sudo allowed."
+sleep 3
+clear
+
+
+
+
 
 echo "updating package lists..."
 sudo apt update -y
@@ -59,7 +65,8 @@ sudo apt install -y proton-vpn-gnome-desktop
 
 sudo apt install -y openvpn 
 sudo apt install -y neofetch 
-sudo apt install -y samba 
+sudo apt install -y samba
+sudo apt install -y python3.14-venv
 sudo apt install -y xfce4
 sudo apt install -y vim 
 sudo apt install -y emacs 
@@ -165,7 +172,7 @@ DISTRIB_DESCRIPTION="EtherStratum 1.2.0 (Debian-based)"
 EOF
 
 sudo tee "$TARGET/etc/issue" > /dev/null <<'EOF'
-EtherStratum GNU/Linux 1.2.0 (Kirbensis)
+EtherStratum GNU/Linux 1.2.0 (Danio)
 Welcome to EtherStratum — run 'etherstratum' for quick info.
 EOF
 
@@ -174,7 +181,7 @@ EtherStratum GNU/Linux 1.2.0 (Danio) - Authorized users only.
 EOF
 
 sudo tee "$TARGET/etc/motd" > /dev/null <<'EOF'
-Welcome to EtherStratum Kirbensis (1.2.0)
+Welcome to EtherStratum Danio (1.2.0)
 Run: etherstratum 
 EOF
 
@@ -198,8 +205,8 @@ echo "Verify with: cat $TARGET/etc/os-release, lsb_release -a, and login to see 
 
 
 echo "creating sandbox and temp directories.."
-sudo mkdir -p /vat /tmp /var
-sudo chmod 777 /vat 
+mkdir -p /vat /tmp /var
+sudo chmod 777 /vat
 
 echo "Setting up TestVat System..."
 
@@ -240,7 +247,7 @@ alias rmrf="rm -rf"
 alias cls="clear"
 alias repeat="yes"
 alias print="echo"
-alias etherstratum="echo EtherStratum v1.1.0"
+alias etherstratum="echo EtherStratum v1.2.0"
 alias firf="firefox"
 alias brvb="brave-browser"
 alias fastfetch="fastfetch --logo ~/.config/fastfetch/logo.txt"
