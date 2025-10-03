@@ -18,7 +18,7 @@ Whether you’re distrohopping or building a dev workstation, EtherStratum gets 
 
 * **Base:** Debian 13 “Trixie” (Debian-based) (Or use any debian or ubuntu based distro)
 
-* **Desktop Environment:** XFCE4
+* **Desktop Environment:** XFCE4 (KDE also)
 
 * **Filesystem Enhancements:**
 
