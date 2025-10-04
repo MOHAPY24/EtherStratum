@@ -53,7 +53,7 @@ sudo apt install software-properties-common
 
 
 udo apt install -y fastfetch || echo "Fastfetch install failed, check Debian source"
-sudo apt install fastfetch
+sudo apt install fastfetch -y
 
 #curl -fsSL https://ollama.com/install.sh | sh
 #ollama pull tinyllama
@@ -253,14 +253,14 @@ alias firf="firefox"
 alias brvb="brave-browser"
 alias fastfetch="fastfetch --logo ~/.config/fastfetch/logo.txt"
 alias clearvat="sudo rm -rf /vat/*"
-alias cleartmp="sudo rm -rm /tmp/*"
+alias cleartmp="sudo rm -rf /tmp/*"
 
 source ~/venvs/venv/bin/activate
 ALIASES
 
 echo "Finalizing.."
 sudo apt update && sudo apt upgrade -y
-sudo apt autoremove
+sudo apt autoremove -y
 clear
 
 
