@@ -93,6 +93,9 @@ sudo apt install -y lua5.4
 sudo apt install -y zsh
 sudo apt install -y ruby
 sudo apt install -y nmap
+sudo apt install -y sddm
+sudo apt install -y lightdm
+sudo apt install -y xorg
 sudo apt install -y gpa
 sudo apt install -y gnupg
 sudo apt install -y yubikey-manager
@@ -156,30 +159,8 @@ DISTRIB_CODENAME=Danio
 DISTRIB_DESCRIPTION="EtherStratum 1.2.0 (Debian-based)"
 EOF
 
-sudo tee "$TARGET/etc/issue" >/dev/null <<'EOF'
-EtherStratum GNU/Linux 1.2.0 (Danio)
-Welcome to EtherStratum — run 'etherstratum' for quick info.
-EOF
-
-sudo tee "$TARGET/etc/issue.net" >/dev/null <<'EOF'
-EtherStratum GNU/Linux 1.2.0 (Danio) - Authorized users only.
-EOF
-
-sudo tee "$TARGET/etc/motd" >/dev/null <<'EOF'
-Welcome to EtherStratum Danio (1.2.0)
-Run: etherstratum 
-EOF
-
 sudo mkdir -p "$TARGET/etc/skel/.config/fastfetch"
 sudo cp etherstratum-logo.txt "$TARGET/etc/skel/.config/fastfetch/logo.txt"
-
-sudo tee -a "$TARGET/etc/skel/.bashrc" >/dev/null <<'EOF'
-# Display EtherStratum Fastfetch on login
-if command -v fastfetch >/dev/null 2>&1; then
-  clear
-  fastfetch --logo ~/.config/fastfetch/logo.txt
-fi
-EOF
 
 echo "EtherStratum identity setup complete!"
 echo "Verify with: cat $TARGET/etc/os-release, lsb_release -a, and login to see Fastfetch."
