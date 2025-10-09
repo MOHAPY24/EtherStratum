@@ -73,8 +73,8 @@ sudo apt install -y python3-pip
 sudo apt install -y npm
 sudo apt install -y gcc
 sudo apt install -y clang
-sudo apt install -y ly
-sudo systemctl enable ly
+sudo apt install -y lightdm 
+sudo apt install -y lightdm-gtk-greeter 
 sudo apt install -y cargo
 sudo apt install -y rustup
 sudo apt install -y golang
@@ -111,7 +111,7 @@ sudo apt install -y masscan
 clear
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 mkdir -p ~/venvs/venv
-sudo python3 -m venv ~/venvs/venv
+python3 -m venv ~/venvs/venv
 source ~/venvs/venv/bin/activate
 pip install colorama requests rich typer pipenv virtualenv psutil
 pip install paramiko fabric schedule docker cryptography pyopenssl
@@ -123,11 +123,10 @@ echo "Customizing.."
 mkdir -p ~/.config/fastfetch
 cp etherstratum-logo.txt ~/.config/fastfetch/logo.txt
 
-TARGET=${1:-/}
 
 echo "Setting up EtherStratum identity files..."
 
-sudo tee "$TARGET/etc/os-release" >/dev/null <<'EOF'
+sudo tee "/etc/os-release" >/dev/null <<'EOF'
 NAME="EtherStratum"
 PRETTY_NAME="EtherStratum 1.2.0 (Debian-based)"
 VERSION="1.2.0"
@@ -142,7 +141,7 @@ BUG_REPORT_URL="https://github.com/MOHAPY24/EtherStratum/issues"
 ANSI_COLOR="0;36"
 EOF
 
-sudo tee "$TARGET/usr/lib/os-release" >/dev/null <<'EOF'
+sudo tee "/usr/lib/os-release" >/dev/null <<'EOF'
 NAME="EtherStratum"
 PRETTY_NAME="EtherStratum 1.2.0 (Debian-based)"
 VERSION="1.2.0"
@@ -152,18 +151,18 @@ ID=etherstratum
 ID_LIKE=debian
 EOF
 
-sudo tee "$TARGET/etc/lsb-release" >/dev/null <<'EOF'
+sudo tee "/etc/lsb-release" >/dev/null <<'EOF'
 DISTRIB_ID=EtherStratum
 DISTRIB_RELEASE=1.2.0
 DISTRIB_CODENAME=Danio
 DISTRIB_DESCRIPTION="EtherStratum 1.2.0 (Debian-based)"
 EOF
 
-sudo mkdir -p "$TARGET/etc/skel/.config/fastfetch"
-sudo cp etherstratum-logo.txt "$TARGET/etc/skel/.config/fastfetch/logo.txt"
+sudo mkdir -p "/etc/skel/.config/fastfetch"
+sudo cp etherstratum-logo.txt "/etc/skel/.config/fastfetch/logo.txt"
 
 echo "EtherStratum identity setup complete!"
-echo "Verify with: cat $TARGET/etc/os-release, lsb_release -a, and login to see Fastfetch."
+echo "Verify with: cat /etc/os-release, lsb_release -a, and login to see Fastfetch."
 
 echo "creating sandbox and temp directories.."
 mkdir -p /vat /tmp /var
@@ -209,7 +208,6 @@ alias fastfetch="fastfetch --logo ~/.config/fastfetch/logo.txt"
 alias clearvat="sudo rm -rf /vat/*"
 alias cleartmp="sudo rm -rf /tmp/*"
 
-source ~/venvs/venv/bin/activate
 ALIASES
 
 echo "Finalizing.."
