@@ -168,23 +168,6 @@ echo "creating sandbox and temp directories.."
 mkdir -p /vat /tmp /var
 sudo chmod 777 /vat
 
-echo "Setting up TestVat System..."
-
-mkdir -p /vat/{base,overlay,work,merged}
-
-mount -t overlay overlay \
-  -o lowerdir=/vat/base,upperdir=/vat/overlay,workdir=/vat/work \
-  /vat/merged
-
-if [ ! -L /vat ]; then
-  mv /vat /vat_old
-  ln -s /vat/merged /vat
-fi
-
-grep -q "/vat/merged" /etc/fstab || echo "overlay /vat/merged overlay lowerdir=/vat/base,upperdir=/vat/overlay,workdir=/vat/work 0 0" >>/etc/fstab
-
-echo "TestVat System containerized at /vat"
-
 clear
 echo "adding common aliases..."
 cat <<'ALIASES' >>~/.bashrc
