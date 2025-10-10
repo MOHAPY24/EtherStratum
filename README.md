@@ -19,7 +19,7 @@ Whether you’re distrohopping or building a dev workstation, EtherStratum gets 
 
 * **Base:** Debian 13 “Trixie” (Debian-based) (Or use any debian or ubuntu based distro)
 
-* **Desktop Environment:** XFCE4 (KDE also)
+* **Desktop Environment:** XFCE4 (Sway also)
 
 * **Filesystem Enhancements:**
 
@@ -50,7 +50,7 @@ Whether you’re distrohopping or building a dev workstation, EtherStratum gets 
 
 * **Installer & Automation:**
 
-  * Single bash script (`install-etherutils.sh`) installs and configures everything
+  * Single bash script (`install-etherstratum.sh`) installs and configures everything
   * Custom aliases & shortcuts for dev productivity
   * Fastfetch integration with custom EtherStratum logo
 
