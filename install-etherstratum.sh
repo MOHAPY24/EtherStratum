@@ -56,6 +56,7 @@ sudo apt install -y proton-vpn-gnome-desktop
 
 sudo apt install -y openvpn
 sudo apt install -y neofetch
+sudo apt install -y sway swaybg rofi waybar 
 sudo apt install -y samba
 sudo apt install -y python3.14-venv
 sudo apt install -y xfce4
