@@ -2,7 +2,7 @@
 
 # EtherStratum 🌠
 
-**EtherStratum** (1.2.0 "Danio") is a lightweight, developer-focused Debian-based distribution installer. It’s designed to seamlessly run on **any Debian/Ubuntu-based system**, providing a fully configured desktop, essential development tools, OPSEC utilities, ready to go out-of-the-box.
+**EtherStratum** (1.2.1 "Danio") is a lightweight, developer-focused Debian-based distribution installer. It’s designed to seamlessly run on **any Debian/Ubuntu-based system**, providing a fully configured desktop, essential development tools, OPSEC utilities, ready to go out-of-the-box.
 
 Whether you’re distrohopping or building a dev workstation, EtherStratum gets you productive fast, without the bloat.
 
@@ -10,6 +10,7 @@ Whether you’re distrohopping or building a dev workstation, EtherStratum gets 
 * Stock DE changed from BSPWM to XFCE
 * More aliases added
 * Fixed custom fastfetch logo not being properly loaded
+* Fixed boot into TTY error 
 
 
 ---
