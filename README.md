@@ -100,4 +100,4 @@ alias clearvat="sudo rm -rf /vat/*"
 
 ## 📜 License
 
-EtherStratum is released under the **MIT License**. See `LICENSE` for details.
+EtherStratum is released under the **GNU Public General License V3** as the Linux distro default. See `LICENSE` for details.
