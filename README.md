@@ -1,5 +1,8 @@
 ![example_photo](Screenshot_20251004_113553.png)
 
+## THIS PROJECT HAS BEEN SCRAPPED, THERE WILL BE 0 NEW UPDATES OR FIXES
+
+
 # EtherStratum 🌠
 
 **EtherStratum** (1.2.1 "Danio") is a lightweight, developer-focused Debian-based distribution installer. It’s designed to seamlessly run on **any Debian/Ubuntu-based system**, providing a fully configured desktop, essential development tools, OPSEC utilities, ready to go out-of-the-box.
